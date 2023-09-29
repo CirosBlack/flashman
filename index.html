@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>CirosBlack - Flashman</title>
-	<link rel="shortcut icon" href="https://raw.githubusercontent.com/CirosBlack/flashman/main/Favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://raw.githubusercontent.com/CirosBlack/jaspion/main/favicon.ico" type="image/x-icon">
 	<style>
     body {
       font-family: "Arial Black", Arial, sans-serif;
@@ -89,21 +89,118 @@
     
     if (coluna2.style.display === 'none') {
       coluna2.style.display = 'table-cell';
-      button.innerHTML = "Ocultar Playlist";
+      button.innerHTML = '<img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Ocultar_Playlist.png" alt="Ícone Pausar" style="width: 50px; height: 50px;">';
     } else {
       coluna2.style.display = 'none';
-      button.innerHTML = "Mostrar Playlist";
+      button.innerHTML = '<img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Mostar_Playlist.png" alt="Ícone Pausar" style="width: 50px; height: 50px;">';
     }
   }
 </script>
 
 <style>
     .toggle-button {
-      float: right;
+    	float: right;
+      background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
     }
   </style>
 
+<style>
+        /* Estilo para o botão */
+        #play-button {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+    <style>
+        /* Estilo para o botão */
+        #previousBtn {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+        <style>
+        /* Estilo para o botão */
+        #nextBtn {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+    <style>
+        /* Estilo para o botão */
+        #tela-cheia-button {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
 
+    <style>
+        /* Estilo para o botão */
+        #retrocede10s {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+        <style>
+        /* Estilo para o botão */
+        #avanca10s {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+     <style>
+        /* Estilo para o botão */
+        #mostrar-controle {
+            background-color: black; /* Define a cor de fundo como preto */
+            border: none; /* Remove a borda */
+            margin: 0; /* Remove a margem */
+            padding: 0; /* Remove o preenchimento interno */
+        }
+    </style>
+    
+    <style>
+        #volume-range {
+            opacity: 0; /* Inicia com opacidade 0 para o fade */
+            transition: opacity 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
+        }
+    </style>
+    
+    <style>
+  /* Estilize a tabela para ocupar 100% da largura da página */
+  table {
+    width: 100%;
+  }
+  /* Estilize as células da tabela para não ter espaçamento e alinhar as imagens ao centro */
+  td {
+    padding: 0;
+    text-align: 
+  }
+  /* Estilize as imagens para ocupar 100% da largura da célula */
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+    
 </head>
 <body>
   <table id="tabela-principal" style="width: 100%;">
@@ -129,24 +226,24 @@
     <div id="time" style="color: #fff; float: right; font-size: 12px;"></div>
   </div>
 </td>
-
           </tr>
           <tr>
             <td id="quarta-celula">
-  <button id="play-button">Play</button>
-<button id="previousBtn">Anterior</button>
-    <button id="nextBtn">Próximo</button>
-  <button id="tela-cheia-button">Tela Cheia</button>
-  <input type="range" id="volume-range"min="0" max="1" step="0.1" value="1">
-    <button class="toggle-button" onclick="toggleColumn()">Ocultar Playlist</button>
-    
+ <button id="play-button"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Play.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button id="retrocede10s"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Voltar_10_segundos.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button id="previousBtn"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Voltar.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button id="nextBtn"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Avancar.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button id="avanca10s"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Avancar_10_segundos.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button id="tela-cheia-button"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Tela.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+<button class="toggle-button" onclick="toggleColumn()"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Ocultar_Playlist.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>  
+ <button id="mostrar-controle"><img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Volume.png" alt="Ícone Play" style="width: 50px; height: 50px;"></button>
+    <input type="range" id="volume-range" min="0" max="1" step="0.1" value="1">
 </td>
+</tr>
         </table>
-      </td>
       <td class="coluna-2" style="border: 1px solid black;">
         <div class="playlist" id="playlist">
         <ul>
-  <ul>
   <li><a href="https://huggingface.co/datasets/Ciros/Flashman/resolve/main/01_A_Terra_Em_Perigo.mp4"><img class="thumbnail" src="https://raw.githubusercontent.com/CirosBlack/flashman/main/01_A_Terra_Em_Perigo.jpg">A Terra Em Perigo</a></li>
   <li><a href="https://huggingface.co/datasets/Ciros/Flashman/resolve/main/02_O_Robo_Gigante.mp4"><img class="thumbnail" src="https://raw.githubusercontent.com/CirosBlack/flashman/main/02_O_Robo_Gigante.jpg">O Robô Gigante</a></li>
   <li><a href="https://huggingface.co/datasets/Ciros/Flashman/resolve/main/03_O_Cacador.mp4"><img class="thumbnail" src="https://raw.githubusercontent.com/CirosBlack/flashman/main/03_O_Cacador.jpg">O Caçador</a></li>
@@ -202,6 +299,45 @@
       </td>
     </tr>
   </table>
+<br>
+	
+<table>
+  <tr>
+    <td>
+      <a href="https://cirosblack.github.io/jaspion">
+        <img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Jaspion%20poster.png" alt="Jaspion">
+      </a>
+    </td>
+    <td>
+      <a href="https://cirosblack.github.io/changeman">
+        <img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/ChangemanPoster.png" alt="Yu Yu Hakusho">
+      </a>
+    </td>
+    <td>
+      <a href="https://cirosblack.github.io/flashman">
+        <img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/FlashmanPoster.png" alt="Jaspion">
+      </a>
+    </td>
+    <td>
+      <a href="https://cirosblack.github.io/YuYuHakusho">
+        <img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/YuYuHakusho%20poster.png" alt="Yu Yu Hakusho">
+      </a>
+    </td>
+  </tr>
+</table>
+
+<script>
+        const botaoMostrar = document.getElementById('mostrar-controle');
+        const controleVolume = document.getElementById('volume-range');
+
+        botaoMostrar.addEventListener('click', () => {
+            if (controleVolume.style.opacity === '0') {
+                controleVolume.style.opacity = '1';
+            } else {
+                controleVolume.style.opacity = '0';
+            }
+        });
+    </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -290,12 +426,13 @@
     playButton.addEventListener("click", function() {
       if (videoPlayer.paused) {
         videoPlayer.play();
-        playButton.textContent = "Pausar";
-      } else {
+        playButton.innerHTML = '<img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Pause.png" alt="Ícone Pausar" style="width: 50px; height: 50px;">';
+                } else {
         videoPlayer.pause();
-        playButton.textContent = "Play";
-      }
-    });
+                    playButton.innerHTML = '<img src="https://raw.githubusercontent.com/CirosBlack/YuYuHakusho/main/Play.png" alt="Ícone Play" style="width: 50px; height: 50px;">';
+                }
+		   });
+    
 
     telaCheiaButton.addEventListener("click", function() {
       if (videoPlayer.requestFullscreen) {
@@ -451,6 +588,31 @@
   var videoPlayer = document.getElementById("video-player");
   videoPlayer.addEventListener("loadedmetadata", updateTime);
 </script>
+
+<script>
+        // Obtenha o elemento de vídeo e o botão
+        var meuVideo = document.getElementById("video-player");
+        var botaoAvanca10s = document.getElementById("avanca10s");
+
+        // Adicione um evento de clique ao botão
+        botaoAvanca10s.addEventListener("click", function() {
+            // Avance o vídeo em 10 segundos
+            meuVideo.currentTime += 10;
+        });
+    </script>
+    
+    <script>
+        // Obtenha o elemento de vídeo e o botão
+        var meuVideo = document.getElementById("video-player");
+        var botaoRetrocede10s = document.getElementById("retrocede10s");
+
+        // Adicione um evento de clique ao botão
+        botaoRetrocede10s.addEventListener("click", function() {
+            // Retroceda o vídeo em 10 segundos
+            meuVideo.currentTime -= 10;
+        });
+    </script>
+
 
 </body>
 </html>
